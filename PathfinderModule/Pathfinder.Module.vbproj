@@ -192,6 +192,7 @@
     <Compile Include="DatabaseUpdate\Updater.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -243,6 +244,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPC.Module\SPC.Module.vbproj">
+      <Project>{f622ea3c-2609-4bb3-b589-6b1f2cfbb035}</Project>
+      <Name>SPC.Module</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

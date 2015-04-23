@@ -277,10 +277,6 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PathfinderModule\PathfinderModule.vbproj">
-      <Project>{222740f4-7828-4949-89aa-2ce0d5c86bd5}</Project>
-      <Name>PathfinderModule</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SPC.Module.Win\SPC.Module.Win.vbproj">
       <Project>{36788C8D-058A-4D98-A6B8-9C66647A10A9}</Project>
       <Name>SPC.Module.Win</Name>

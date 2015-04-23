@@ -9,8 +9,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPC.Module.Win", "SPC.Modul
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPC.Win", "SPC.Win\SPC.Win.vbproj", "{867DE1D7-518D-4373-A8BB-FCCBD1CB18BC}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PathfinderModule", "PathfinderModule\PathfinderModule.vbproj", "{222740F4-7828-4949-89AA-2CE0D5C86BD5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,12 +34,6 @@ Global
 		{867DE1D7-518D-4373-A8BB-FCCBD1CB18BC}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{867DE1D7-518D-4373-A8BB-FCCBD1CB18BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{867DE1D7-518D-4373-A8BB-FCCBD1CB18BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{222740F4-7828-4949-89AA-2CE0D5C86BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{222740F4-7828-4949-89AA-2CE0D5C86BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{222740F4-7828-4949-89AA-2CE0D5C86BD5}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
-		{222740F4-7828-4949-89AA-2CE0D5C86BD5}.EasyTest|Any CPU.Build.0 = Release|Any CPU
-		{222740F4-7828-4949-89AA-2CE0D5C86BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{222740F4-7828-4949-89AA-2CE0D5C86BD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

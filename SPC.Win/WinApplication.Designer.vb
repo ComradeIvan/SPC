@@ -25,13 +25,13 @@ Partial Public Class SPCWindowsFormsApplication
 	''' the contents of this method with the code editor.
 	''' </summary>
 	Private Sub InitializeComponent()
-		Me.module1 = New DevExpress.ExpressApp.SystemModule.SystemModule()
+        Me.module1 = New DevExpress.ExpressApp.SystemModule.SystemModule()
         Me.module2 = New DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule()
-		Me.module3 = New Global.SPC.Module.SPCModule()
-        Me.module4 = New Global.SPC.Module.Win.SPCWindowsFormsModule()
-        Me.module5 = New Global.PathfinderModule.PathfinderModuleModule()
+        Me.module3 = New SPC.[Module].SPCModule()
+        Me.module4 = New SPC.[Module].Win.SPCWindowsFormsModule()
         Me.securityModule1 = New DevExpress.ExpressApp.Security.SecurityModule()
         Me.securityStrategyComplex1 = New DevExpress.ExpressApp.Security.SecurityStrategyComplex()
+        Me.authenticationStandard1 = New DevExpress.ExpressApp.Security.AuthenticationStandard()
         Me.objectsModule = New DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule()
         Me.cloneObjectModule = New DevExpress.ExpressApp.CloneObject.CloneObjectModule()
         Me.conditionalAppearanceModule = New DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule()
@@ -43,50 +43,46 @@ Partial Public Class SPCWindowsFormsApplication
         Me.validationModule = New DevExpress.ExpressApp.Validation.ValidationModule()
         Me.validationWindowsFormsModule = New DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule()
         Me.viewVariantsModule = New DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule()
-        Me.authenticationStandard1 = New DevExpress.ExpressApp.Security.AuthenticationStandard()
-		CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
-        ' 
-        ' securityStrategyComplex1
-        ' 
+        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+        '
+        'securityStrategyComplex1
+        '
         Me.securityStrategyComplex1.Authentication = Me.authenticationStandard1
         Me.securityStrategyComplex1.RoleType = GetType(DevExpress.ExpressApp.Security.Strategy.SecuritySystemRole)
         Me.securityStrategyComplex1.UserType = GetType(DevExpress.ExpressApp.Security.Strategy.SecuritySystemUser)
-        ' 
-        ' securityModule1
-        ' 
-        Me.securityModule1.UserType = GetType(DevExpress.ExpressApp.Security.Strategy.SecuritySystemUser)
-        ' 
-        ' authenticationStandard1
-        ' 
+        '
+        'authenticationStandard1
+        '
         Me.authenticationStandard1.LogonParametersType = GetType(DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters)
-        ' 
-		' SPCWindowsFormsApplication
-		' 
-		Me.ApplicationName = "SPC"
+        '
+        'validationModule
+        '
+        Me.validationModule.AllowValidationDetailsAccess = True
+        Me.validationModule.IgnoreWarningAndInformationRules = False
+        '
+        'SPCWindowsFormsApplication
+        '
+        Me.ApplicationName = "SPC"
         Me.Modules.Add(Me.module1)
-		Me.Modules.Add(Me.module2)
-		Me.Modules.Add(Me.module3)
-		Me.Modules.Add(Me.module4)
-        Me.Modules.Add(Me.securityModule1)
-        Me.Security = Me.securityStrategyComplex1
+        Me.Modules.Add(Me.module2)
         Me.Modules.Add(Me.objectsModule)
         Me.Modules.Add(Me.cloneObjectModule)
         Me.Modules.Add(Me.conditionalAppearanceModule)
-        Me.Modules.Add(Me.fileAttachmentsWindowsFormsModule)
         Me.Modules.Add(Me.schedulerModuleBase)
-        Me.Modules.Add(Me.schedulerWindowsFormsModule)
         Me.Modules.Add(Me.treeListEditorsModuleBase)
-        Me.Modules.Add(Me.treeListEditorsWindowsFormsModule)
         Me.Modules.Add(Me.validationModule)
-        Me.Modules.Add(Me.validationWindowsFormsModule)
         Me.Modules.Add(Me.viewVariantsModule)
+        Me.Modules.Add(Me.module3)
+        Me.Modules.Add(Me.module4)
+        Me.Modules.Add(Me.securityModule1)
+        Me.Modules.Add(Me.fileAttachmentsWindowsFormsModule)
+        Me.Modules.Add(Me.schedulerWindowsFormsModule)
+        Me.Modules.Add(Me.treeListEditorsWindowsFormsModule)
+        Me.Modules.Add(Me.validationWindowsFormsModule)
+        Me.Security = Me.securityStrategyComplex1
+        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
-        AddHandler Me.DatabaseVersionMismatch, AddressOf SPCWindowsFormsApplication_DatabaseVersionMismatch
-        AddHandler Me.CustomizeLanguagesList, AddressOf SPCWindowsFormsApplication_CustomizeLanguagesList
-
-		CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
-	End Sub
+    End Sub
 
 #End Region
 
@@ -94,7 +90,6 @@ Partial Public Class SPCWindowsFormsApplication
     Private module2 As DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule
 	Private module3 As Global.SPC.Module.SPCModule
     Private module4 As Global.SPC.Module.Win.SPCWindowsFormsModule
-    Private module5 As Global.PathfinderModule.PathfinderModuleModule
     Private securityModule1 As DevExpress.ExpressApp.Security.SecurityModule 
     Private securityStrategyComplex1 As DevExpress.ExpressApp.Security.SecurityStrategyComplex
     Private authenticationStandard1 As DevExpress.ExpressApp.Security.AuthenticationStandard 

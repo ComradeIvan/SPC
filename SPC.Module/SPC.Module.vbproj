@@ -150,6 +150,10 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\Pathfinder\Character.vb" />
+    <Compile Include="BusinessObjects\Pathfinder\Class.vb" />
+    <Compile Include="BusinessObjects\Lists\Enum.vb" />
+    <Compile Include="BusinessObjects\Pathfinder\Race.vb" />
     <Compile Include="Module.Designer.vb">
       <DependentUpon>Module.vb</DependentUpon>
     </Compile>
@@ -174,6 +178,7 @@
     <Compile Include="DatabaseUpdate\Updater.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

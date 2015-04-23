@@ -12,10 +12,11 @@ Imports DevExpress.Xpo
 Imports DevExpress.ExpressApp
 Imports DevExpress.Persistent.Base
 Imports DevExpress.Persistent.BaseImpl
+Imports SPC.Module
 <DefaultClassOptions> _
+<DevExpress.Persistent.Base.NavigationItemAttribute("Pathfinder")> _
 Public Partial Class Character
   Inherits DevExpress.Persistent.BaseImpl.BaseObject
-  Private _background As System.String
   Private _race As PathfinderModule.Race
   Private _experience As System.Int32
   Private _level As System.Int32
@@ -158,12 +159,6 @@ Public Partial Class Character
       SetPropertyValue("Experience", _experience, value)
     End Set
   End Property
-  <DevExpress.Xpo.AssociationAttribute("Classes-Characters")> _
-  Public ReadOnly Property Classes As XPCollection(Of PathfinderModule.Class)
-    Get
-      Return GetCollection(Of PathfinderModule.Class)("Classes")
-    End Get
-  End Property
   Public Property Race As PathfinderModule.Race
     Get
       Return _race
@@ -184,18 +179,6 @@ Public Partial Class Character
         _race.Character = Me
       End If
       OnChanged("Race")
-    End Set
-  End Property
-  <DevExpress.Xpo.SizeAttribute(4096)> _
-  <DevExpress.Persistent.Base.VisibleInListViewAttribute(False)> _
-  <DevExpress.Persistent.Base.VisibleInLookupListViewAttribute(False)> _
-  <DevExpress.Xpo.NonPersistentAttribute> _
-  Public Property Background As System.String
-    Get
-      Return _background
-    End Get
-    Set
-      SetPropertyValue("Background", _background, value)
     End Set
   End Property
 End Class

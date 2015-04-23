@@ -1,7 +1,7 @@
 Imports Microsoft.VisualBasic
 Imports System
 
-Partial Public Class PathfinderModuleModule
+Partial Public Class SPC.
     ''' <summary> 
     ''' Required designer variable.
     ''' </summary>
