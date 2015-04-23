@@ -1,5 +1,5 @@
 ﻿Imports System
 Imports System.Collections.Generic
 
-Partial Public Class [Class]
+Public Partial Class SpecialAbility
 End Class

@@ -3,4 +3,81 @@
   <BOModel>
     <Class Name="PathfinderModule.Character" IsDesigned="True" />
   </BOModel>
+  <Views>
+    <DetailView Id="Character_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="23.628048780487806">
+            <TabbedGroup Id="Item1" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Character" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Character_col1" ShowCaption="False" Index="0" RelativeSize="49.419218585005282" IsNewNode="True">
+                  <LayoutItem Id="Name" ViewItem="Name" SizeConstraintsType="Default" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                  <LayoutItem Id="Race" ViewItem="Race" SizeConstraintsType="Default" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="Alignment" ViewItem="Alignment" SizeConstraintsType="Default" Index="2" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Character_col2" ShowCaption="False" Index="1" RelativeSize="50.580781414994718" IsNewNode="True">
+                  <LayoutItem Id="Experience" ViewItem="Experience" SizeConstraintsType="Default" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                  <LayoutItem Id="Level" ViewItem="Level" SizeConstraintsType="Default" Index="1" RelativeSize="71.428571428571431" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="100" Caption="Fluff" Direction="Horizontal" IsNewNode="True">
+                <LayoutGroup Id="Auto3ddb8615-0be2-404f-97d0-49167849560e" ShowCaption="False" Caption="Auto3ddb8615-0be2-404f-97d0-49167849560e(598)" Index="0" RelativeSize="49.419218585005282" IsNewNode="True">
+                  <LayoutItem Id="Gender" ViewItem="Gender" SizeConstraintsType="Custom" MinSize="131, 24" MaxSize="0, 0" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                  <LayoutItem Id="Age" ViewItem="Age" SizeConstraintsType="Default" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="Deity" ViewItem="Deity" SizeConstraintsType="Custom" MinSize="131, 24" MaxSize="0, 0" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="HairColor" ViewItem="HairColor" SizeConstraintsType="Default" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autocbf0c0aa-eb85-45a1-9973-d8a7057c48de" ShowCaption="False" Caption="Autocbf0c0aa-eb85-45a1-9973-d8a7057c48de(603)" Index="1" RelativeSize="50.580781414994718" IsNewNode="True">
+                  <LayoutItem Id="Size" ViewItem="Size" SizeConstraintsType="Custom" MinSize="131, 32" MaxSize="0, 0" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                  <LayoutItem Id="Height" ViewItem="Height" SizeConstraintsType="Custom" MinSize="131, 24" MaxSize="0, 0" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="Weight" ViewItem="Weight" SizeConstraintsType="Default" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="EyeColor" ViewItem="EyeColor" SizeConstraintsType="Default" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Character" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="Character_col1" RelativeSize="48.920863309352519">
+                <LayoutItem Id="Alignment" SizeConstraintsType="Default" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Deity" SizeConstraintsType="Default" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Gender" SizeConstraintsType="Default" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="Name" SizeConstraintsType="Default" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="Size" SizeConstraintsType="Default" RelativeSize="17.647058823529413" />
+              </LayoutGroup>
+              <LayoutGroup Id="Character_col2" RelativeSize="48.818088386433708">
+                <LayoutItem Id="EyeColor" SizeConstraintsType="Default" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="HairColor" SizeConstraintsType="Default" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Height" SizeConstraintsType="Default" RelativeSize="17.647058823529413" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="5.0304878048780486">
+            <LayoutItem Id="Background" SizeConstraintsType="Default" RelativeSize="100" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="2" RelativeSize="71.341463414634148" IsNewNode="True" Removed="True">
+            <LayoutGroup Id="Skills" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Skills" ShowCaption="False" ViewItem="Skills" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Spells" ShowCaption="True" Index="1" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Spells" ShowCaption="False" ViewItem="Spells" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Feats" ShowCaption="True" Index="2" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Feats" ShowCaption="False" ViewItem="Feats" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Items" ShowCaption="True" Index="3" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Items" ShowCaption="False" ViewItem="Items" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="SpecialAbilities" ShowCaption="True" Caption="Special Abilities" Index="4" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="SpecialAbilities" ShowCaption="False" ViewItem="SpecialAbilities" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Classes" ShowCaption="True" Index="5" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Classes" ShowCaption="False" ViewItem="Classes" SizeConstraintsType="Default" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Index="6" RelativeSize="100" Caption="Bakckground" IsNewNode="True">
+              <LayoutItem Id="Background" ViewItem="Background" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
 </Application>

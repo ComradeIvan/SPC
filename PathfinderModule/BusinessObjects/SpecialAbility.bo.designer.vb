@@ -13,12 +13,12 @@ Imports DevExpress.ExpressApp
 Imports DevExpress.Persistent.Base
 Imports DevExpress.Persistent.BaseImpl
 <DefaultClassOptions> _
-Public Partial Class Spell
+Public Partial Class SpecialAbility
   Inherits DevExpress.Persistent.BaseImpl.BaseObject
   Public Sub New(ByVal session As Session)
     MyBase.New(session)
   End Sub
-  <DevExpress.Xpo.AssociationAttribute("Spells-Characters")> _
+  <DevExpress.Xpo.AssociationAttribute("SpecialAbilities-Characters")> _
   Public ReadOnly Property Characters As XPCollection(Of PathfinderModule.Character)
     Get
       Return GetCollection(Of PathfinderModule.Character)("Characters")

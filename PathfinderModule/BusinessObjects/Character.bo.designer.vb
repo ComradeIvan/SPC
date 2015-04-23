@@ -15,6 +15,10 @@ Imports DevExpress.Persistent.BaseImpl
 <DefaultClassOptions> _
 Public Partial Class Character
   Inherits DevExpress.Persistent.BaseImpl.BaseObject
+  Private _background As System.String
+  Private _race As PathfinderModule.Race
+  Private _experience As System.Int32
+  Private _level As System.Int32
   Private _age As System.Int32
   Private _weight As System.Double
   Private _height As System.Double
@@ -106,6 +110,92 @@ Public Partial Class Character
     End Get
     Set
       SetPropertyValue("EyeColor", _eyeColor, value)
+    End Set
+  End Property
+  <DevExpress.Xpo.AssociationAttribute("Skills-Characters")> _
+  Public ReadOnly Property Skills As XPCollection(Of PathfinderModule.Skill)
+    Get
+      Return GetCollection(Of PathfinderModule.Skill)("Skills")
+    End Get
+  End Property
+  <DevExpress.Xpo.AssociationAttribute("Spells-Characters")> _
+  Public ReadOnly Property Spells As XPCollection(Of PathfinderModule.Spell)
+    Get
+      Return GetCollection(Of PathfinderModule.Spell)("Spells")
+    End Get
+  End Property
+  <DevExpress.Xpo.AssociationAttribute("Feats-Characters")> _
+  Public ReadOnly Property Feats As XPCollection(Of PathfinderModule.Feat)
+    Get
+      Return GetCollection(Of PathfinderModule.Feat)("Feats")
+    End Get
+  End Property
+  <DevExpress.Xpo.AssociationAttribute("Items-Characters")> _
+  Public ReadOnly Property Items As XPCollection(Of PathfinderModule.Item)
+    Get
+      Return GetCollection(Of PathfinderModule.Item)("Items")
+    End Get
+  End Property
+  <DevExpress.Xpo.AssociationAttribute("SpecialAbilities-Characters")> _
+  Public ReadOnly Property SpecialAbilities As XPCollection(Of PathfinderModule.SpecialAbility)
+    Get
+      Return GetCollection(Of PathfinderModule.SpecialAbility)("SpecialAbilities")
+    End Get
+  End Property
+  Public Property Level As System.Int32
+    Get
+      Return _level
+    End Get
+    Set
+      SetPropertyValue("Level", _level, value)
+    End Set
+  End Property
+  Public Property Experience As System.Int32
+    Get
+      Return _experience
+    End Get
+    Set
+      SetPropertyValue("Experience", _experience, value)
+    End Set
+  End Property
+  <DevExpress.Xpo.AssociationAttribute("Classes-Characters")> _
+  Public ReadOnly Property Classes As XPCollection(Of PathfinderModule.Class)
+    Get
+      Return GetCollection(Of PathfinderModule.Class)("Classes")
+    End Get
+  End Property
+  Public Property Race As PathfinderModule.Race
+    Get
+      Return _race
+    End Get
+    Set
+      If _race Is value Then
+        Return
+      End If
+      Dim prevRace As PathfinderModule.Race = _race
+      _race = value
+      If IsLoading Then
+        Return
+      End If
+      If prevRace IsNot Nothing AndAlso prevRace.Character Is Me Then
+        prevRace.Character = Nothing
+      End If
+      If _race IsNot Nothing Then
+        _race.Character = Me
+      End If
+      OnChanged("Race")
+    End Set
+  End Property
+  <DevExpress.Xpo.SizeAttribute(4096)> _
+  <DevExpress.Persistent.Base.VisibleInListViewAttribute(False)> _
+  <DevExpress.Persistent.Base.VisibleInLookupListViewAttribute(False)> _
+  <DevExpress.Xpo.NonPersistentAttribute> _
+  Public Property Background As System.String
+    Get
+      Return _background
+    End Get
+    Set
+      SetPropertyValue("Background", _background, value)
     End Set
   End Property
 End Class

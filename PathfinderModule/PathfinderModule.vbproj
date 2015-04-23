@@ -156,6 +156,12 @@
     <Compile Include="BusinessObjects\Spell.bo.vb">
       <DependentUpon>Spell.bo</DependentUpon>
     </Compile>
+    <Compile Include="BusinessObjects\SpecialAbility.bo.designer.vb">
+      <DependentUpon>SpecialAbility.bo</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SpecialAbility.bo.vb">
+      <DependentUpon>SpecialAbility.bo</DependentUpon>
+    </Compile>
     <Compile Include="BusinessObjects\Trait.bo.designer.vb">
       <DependentUpon>Trait.bo</DependentUpon>
     </Compile>
@@ -203,6 +209,7 @@
     <EmbeddedResource Include="BusinessObjects\Feat.bo" />
     <EmbeddedResource Include="BusinessObjects\Item.bo" />
     <EmbeddedResource Include="BusinessObjects\Spell.bo" />
+    <EmbeddedResource Include="BusinessObjects\SpecialAbility.bo" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

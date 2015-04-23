@@ -28,7 +28,8 @@ Partial Public Class SPCWindowsFormsApplication
 		Me.module1 = New DevExpress.ExpressApp.SystemModule.SystemModule()
         Me.module2 = New DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule()
 		Me.module3 = New Global.SPC.Module.SPCModule()
-		Me.module4 = New Global.SPC.Module.Win.SPCWindowsFormsModule()
+        Me.module4 = New Global.SPC.Module.Win.SPCWindowsFormsModule()
+        Me.module5 = New Global.PathfinderModule.PathfinderModuleModule()
         Me.securityModule1 = New DevExpress.ExpressApp.Security.SecurityModule()
         Me.securityStrategyComplex1 = New DevExpress.ExpressApp.Security.SecurityStrategyComplex()
         Me.objectsModule = New DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule()
@@ -93,6 +94,7 @@ Partial Public Class SPCWindowsFormsApplication
     Private module2 As DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule
 	Private module3 As Global.SPC.Module.SPCModule
     Private module4 As Global.SPC.Module.Win.SPCWindowsFormsModule
+    Private module5 As Global.PathfinderModule.PathfinderModuleModule
     Private securityModule1 As DevExpress.ExpressApp.Security.SecurityModule 
     Private securityStrategyComplex1 As DevExpress.ExpressApp.Security.SecurityStrategyComplex
     Private authenticationStandard1 As DevExpress.ExpressApp.Security.AuthenticationStandard 
